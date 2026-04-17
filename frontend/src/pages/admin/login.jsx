@@ -21,7 +21,7 @@ const { setUser, setToken, isAuthenticated } = useAuthContext();
  // const { isAuthenticated } = useAuthContext();
   useEffect(() => {
     if (isAuthenticated) {
-      navigate("/home", { replace: true });
+      navigate("/admin/home", { replace: true });
     }
   }, []);
   const validateForm = () => {
@@ -65,7 +65,7 @@ const { setUser, setToken, isAuthenticated } = useAuthContext();
 setToken(accessToken);
 setUser(user);
         //isAuthenticated(true)
-        navigate("/home");
+        navigate("/admin/home");
       }
     } catch (error) {
       

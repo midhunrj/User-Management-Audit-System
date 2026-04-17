@@ -5,6 +5,7 @@ import Dashboard from "../pages/admin/adminDashboard";
 import UserList from "../pages/admin/userList";
 import ManagerList from "../pages/admin/managerList";
 import AdminProtected from "./protected/adminProtected";
+import NotFound404 from "./protected/404";
 
 ;
 

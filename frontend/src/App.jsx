@@ -16,7 +16,7 @@ function App() {
       <Routes>
 
             <Route path="/*" element={<UserRoute />} />
-            <Route path="/theatre/*" element={<ManagerRoute />} />
+            <Route path="/manager/*" element={<ManagerRoute />} />
             <Route path="/admin/*" element={<AdminRoute />} />
 
           </Routes>

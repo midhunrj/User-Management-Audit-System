@@ -17,7 +17,7 @@ router.get('/me', authHandler.userLogin, userController.getProfile);
 
 router.get('/', authHandler.adminOrManager, userController.getUsers);
 
-router.post('/', authHandler.adminLogin, userController.createUser);
+router.post('/create-user', authHandler.adminLogin, userController.createUser);
 
 router.get('/:id', authHandler.adminOrManager, userController.getUser);
 

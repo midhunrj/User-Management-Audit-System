@@ -15,7 +15,7 @@ import { userAuthenticate } from "../../services/userInterceptor";
 const ManagerSignup = () => {
     const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
-  const [password, setPassword] = useState<str("");
+  const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const [errors,setErrors]=useState({})
   // const [otp, setOtp] = useState("");
@@ -27,7 +27,7 @@ const ManagerSignup = () => {
   
   useEffect(() => {
     if (userAuthenticated) {
-      navigate("/home", { replace: true });
+      navigate("/manager/home", { replace: true });
     }
   }, []);
   // useEffect(() => {
@@ -81,7 +81,7 @@ const ManagerSignup = () => {
         // localStorage.setItem("URlShortenerRefreshToken", refreshToken);
         // localStorage.setItem("URlShortenerData", JSON.stringify(true));
         //setUserAuthenticated(true);
-        navigate("/");
+        navigate("/manager");
       }
     } catch (error) {
       
@@ -152,7 +152,7 @@ const ManagerSignup = () => {
               Signup
             </button>
             <span className="text-white mt-4 mb-2">Already have an Account?</span>
-            <Link to={'/'} className="text-white opacity-80 cursor-pointer hover:opacity-100  transition-all">Login</Link>
+            <Link to={'/manager'} className="text-white opacity-80 cursor-pointer hover:opacity-100  transition-all">Login</Link>
           
           </form>
         </div>

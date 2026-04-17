@@ -14,10 +14,10 @@ import NotFound404 from "./protected/404";
 export const ManagerRoute = () => {
   return (
     // <BrowserRouter>
-    <IdentifierProvider>
+    // <IdentifierProvider>
       <Routes>
         <Route path="/" element={<ManagerLogin />} />
-        <Route path="/signup" element={<ManagerSignup />} />
+        {/* <Route path="/register" element={<ManagerSignup />} /> */}
         <Route
           path="/profile"
           element={
@@ -37,6 +37,6 @@ export const ManagerRoute = () => {
         
         <Route path="*" element={<NotFound404 />} />
       </Routes>
-    </IdentifierProvider>
+    // </IdentifierProvider>
   );
 };

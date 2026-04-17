@@ -22,7 +22,6 @@ class UserUseCase {
     return user;
   }
 
-  // Create new user (Admin only)
   async createUser(userData, createdBy) {
     const { name, email, password, role } = userData;
 
@@ -31,7 +30,7 @@ class UserUseCase {
 
     const hashedPassword = await bcrypt.hash(password || 'Default@123', 10);
 
-    return await userRepository.create({
+    return await userRepository.createUser({
       name,
       email,
       password: hashedPassword,
@@ -41,7 +40,6 @@ class UserUseCase {
     });
   }
 
-  // Update user (Own profile or by Admin/Manager)
   async updateUser(id, updateData, updatedBy) {
     if (updateData.password) {
       updateData.password = await bcrypt.hash(updateData.password, 10);

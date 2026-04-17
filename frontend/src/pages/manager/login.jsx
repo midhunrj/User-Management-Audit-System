@@ -127,8 +127,8 @@ setUser(user);
             >
               Login
             </button>
-            <span className="text-white mt-4 mb-2">Don't have an Account?</span>
-            <Link to={'/register'} className="text-white opacity-80 cursor-pointer hover:opacity-100  transition-all">Signup</Link>
+            {/* <span className="text-white mt-4 mb-2">Don't have an Account?</span>
+            <Link to={'/manager/register'} className="text-white opacity-80 cursor-pointer hover:opacity-100  transition-all">Signup</Link> */}
           </form>
         </div>
       </div>
